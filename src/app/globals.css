@@ -12,7 +12,11 @@
     }
 
     .max-width{
-      @apply max-w-[90%] mx-auto px-2 sm:px-0 
+      @apply max-w-[90%] mx-auto
+    }
+
+    body{
+      @apply bg-slate-100/50
     }
 
 }

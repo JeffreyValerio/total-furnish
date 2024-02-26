@@ -1,10 +1,9 @@
 import Image from 'next/image'
-import React from 'react'
 
 export const FeaturesCard = () => {
     return (
         <div className='w-full group'>
-            <div className="overflow-hidden rounded-md group-hover:scale-[.97] transition-all ease-in-out duration-500">
+            <div className="overflow-hidden group-hover:scale-[.97] transition-all ease-in-out duration-500">
                 <Image
                     className='h-96 object-cover group-hover:scale-[1.2] transition-all ease-in-out duration-500'
                     src={'/images/silla.webp'}

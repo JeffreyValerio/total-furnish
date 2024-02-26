@@ -1,4 +1,4 @@
-import { About, FeaturesProducts, Hero, Services } from "@/components";
+import { About, Collections, FeaturesProducts, Hero, Services } from "@/components";
 
 
 export const metadata = {
@@ -14,10 +14,12 @@ export default function HomePage() {
 
       <About />
 
-      <FeaturesProducts/>
+      <FeaturesProducts />
 
       <p>testimonials</p>
-      <p>collections</p>
+
+      <Collections />
+
       <p>suscribe</p>
       <p>trending</p>
       <p>articles</p>

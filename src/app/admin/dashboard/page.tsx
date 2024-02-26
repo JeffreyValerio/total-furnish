@@ -10,19 +10,25 @@ export const metadata = {
 
 export default async function DashboardPage() {
 
-  const [brandsData, categoriesData, warrantiesData, productsData, supplierData] = await Promise.all([
-    getPaginatedBrands({}),
-    getPaginatedCategories({}),
-    getPaginatedWarranties({}),
-    getPaginatedProducts({}),
-    getPaginatedSuppliers({})
-  ]);
+  // const [brandsData, categoriesData, warrantiesData, productsData, supplierData] = await Promise.all([
+  //   getPaginatedBrands({}),
+  //   getPaginatedCategories({}),
+  //   getPaginatedWarranties({}),
+  //   getPaginatedProducts({}),
+  //   getPaginatedSuppliers({})
+  // ]);
 
-  const { totalBrands } = brandsData;
-  const { totalCategories } = categoriesData;
-  const { totalWarranties } = warrantiesData
-  const { totalProducts } = productsData;
-  const { totalSuppliers } = supplierData;
+  // const { totalBrands } = brandsData;
+  // const { totalCategories } = categoriesData;
+  // const { totalWarranties } = warrantiesData
+  // const { totalProducts } = productsData;
+  // const { totalSuppliers } = supplierData;
+
+  const totalBrands = 1;
+  const totalCategories = 1;
+  const totalWarranties = 1
+  const totalProducts = 1;
+  const totalSuppliers = 1;
 
   const cards = [
     { name: 'marcas', icon: <DicesIcon strokeWidth={1} size={30} />, count: totalBrands, href: 'brands' },

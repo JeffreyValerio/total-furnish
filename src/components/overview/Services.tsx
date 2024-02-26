@@ -26,7 +26,7 @@ const services = [
 
 export const Services = () => {
     return (
-        <div className='max-width py-12'>
+        <div className='max-width py-20'>
             <div className="grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:justify-between">
                 {services.map((item) => (
                     <React.Fragment key={item.title}>
