@@ -41,7 +41,7 @@ export const Collections = () => {
         <div className='py-20 max-width'>
             <h3 className='heading mb-10'>Collections</h3>
 
-            <div className="grid grid-cols-1 gap-x-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6">
                 {collections.map((collection) => (
                     <React.Fragment key={collection.url}>
                         <CollectionCard {...collection} />

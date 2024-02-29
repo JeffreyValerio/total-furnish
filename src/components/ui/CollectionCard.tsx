@@ -1,4 +1,4 @@
-import { ArrowRightIcon } from 'lucide-react'
+import { ArrowRightIcon, CheckCircleIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -17,8 +17,9 @@ export const CollectionCard = ({ title, description, features, image, url }: Pro
             <h2 className='text-2xl mb-2 font-medium uppercase mt-4 sm:mt-0'>
                 <Link href={`${url}`}>
                     {title}
-                </Link> 
+                </Link>
             </h2>
+
             <div className="overflow-hidden transition-all ease-in-out duration-500">
                 <Image
                     className='object-cover group-hover:scale-[1.2] transition-all ease-in-out duration-500'
@@ -27,13 +28,16 @@ export const CollectionCard = ({ title, description, features, image, url }: Pro
                     alt='' />
             </div>
 
-            <div className='absolute p-6 bottom-0 overflow-hidden translate-y-[25rem] group-hover:translate-y-0 transition-all ease-in-out duration-1000 bg-white'>
+            <div className='absolute p-6 bottom-0 overflow-hidden translate-y-full group-hover:translate-y-0 transition-all ease-in-out duration-1000 bg-white'>
                 <div className="text-content p-5 bg-light">
-                    <h3 className='text-2xl font-light mb-6 uppercase'>Sobre {title}</h3>
-                    <p>{description}</p>
-                    <ul className='list-disc ml-8 my-4'>
+                    <h3 className='text-xl sm:text-2xl font-light mb-3 sm:mb-6 uppercase'>Sobre {title}</h3>
+                    <p className='text-sm'>{description}</p>
+                    <ul className='list-disc ml-4 my-4 text-sm'>
                         {features.map((feature, index) => (
-                            <li key={index}>{feature}</li>
+                            <li key={index} className='flex items-center gap-x-1'>
+                                <CheckCircleIcon size={18} className='flex-shrink-0' strokeWidth={1} color='green' />
+                                {feature}
+                            </li>
                         ))}
                     </ul>
 

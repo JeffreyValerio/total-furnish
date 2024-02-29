@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Logo } from '..'
 
 export const Footer = () => {
   return (
@@ -6,7 +7,7 @@ export const Footer = () => {
       <div className='max-width py-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-light gap-y-8'>
 
         <div>
-          LOGO
+          <Logo />
 
           <p className='pr-10 mt-8'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus laboriosam expedita amet dignissimos quisquam eveniet neque? Laudantium, explicabo quam autem fugiat placeat architecto fuga itaque porro impedit non est necessitatibus.
