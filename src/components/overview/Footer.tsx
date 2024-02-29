@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Logo } from '..'
+import Image from 'next/image'
 
 export const Footer = () => {
   return (
@@ -42,6 +43,14 @@ export const Footer = () => {
             <li><Link href={'/'}>Youtube</Link></li>
           </ul>
         </div>
+
+        <Image
+          src={'/images/sillon-footer.png'}
+          alt=''
+          width={300}
+          height={300}
+          className='md:absolute right-0 sm:right-[100px] -translate-y-60 hover:rotate-12 transition-all duration-300 ease-in-out hidden md:block'
+        />
 
         <div>
           <h3 className='font-semibold mb-4 text-2xl'>Contáctanos</h3>

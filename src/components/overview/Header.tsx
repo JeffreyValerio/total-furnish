@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export const Header = () => {
   return (
-    <div className='grid sm:grid-cols-2 justify-center sm:justify-between py-5 border-b'>
+    <div className='max-width grid sm:grid-cols-2 justify-center sm:justify-between py-5 border-b'>
 
       <Logo />
 
@@ -17,7 +17,6 @@ export const Header = () => {
           <li><Link href={''}>Contacto</Link> </li>
         </ul>
       </nav>
-
 
     </div>
   )
