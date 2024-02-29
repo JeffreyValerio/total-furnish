@@ -15,14 +15,12 @@ export const Customers = () => {
                     delay: 2500,
                     disableOnInteraction: false,
                 }}
+                slidesPerView={3}
                 spaceBetween={30}
                 modules={[Autoplay, Pagination, Navigation]}
                 breakpoints={{
-                    640: {
-                        slidesPerView: 1
-                    },
                     768: {
-                        slidesPerView: 2,
+                        slidesPerView: 4,
                     },
                     1024: {
                         slidesPerView: 5,
@@ -32,8 +30,8 @@ export const Customers = () => {
                 className="mySwiper">
                 {customers.map((customer, index) => (
                     <SwiperSlide key={index}>
-                        <Image src={`${customer.image}`} alt='customer-logo' width={100} height={300} 
-                        className='grayscale hover:grayscale-0 transition-all ease-in-out duration-1000'/>
+                        <Image src={`${customer.image}`} alt='customer-logo' width={100} height={300}
+                            className='grayscale hover:grayscale-0 transition-all ease-in-out duration-1000' />
                     </SwiperSlide>
                 ))}
             </Swiper>
