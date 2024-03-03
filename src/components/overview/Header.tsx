@@ -1,6 +1,6 @@
 import React from 'react'
-import { Logo } from '..'
 import Link from 'next/link'
+import { Logo } from '..'
 
 export const Header = () => {
   return (

@@ -13,10 +13,8 @@ export default function HomePage() {
       <Services />
 
       <BestSellers />
-
-      <About />
-
       <FeaturesProducts />
+      <About />
 
       {/* <p>testimonials</p> */}
 
