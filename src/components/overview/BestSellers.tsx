@@ -3,7 +3,7 @@ import React from 'react'
 
 export const BestSellers = () => {
     return (
-        <div className='max-width xl:grid grid-cols-4 gap-4 items-center justify-center mb-20 xl:mb-0'>
+        <section className='max-width sm:h-screen xl:grid grid-cols-4 gap-4 items-center justify-center mb-20 xl:mb-0'>
 
             <div className="sm:col-start-1 sm:col-end-2">
 
@@ -33,6 +33,6 @@ export const BestSellers = () => {
                     <p className='font-bold text-xl'>$75</p>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
