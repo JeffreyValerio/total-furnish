@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 export const Hero = () => {
   return (
-    <div className='w-full sm:h-screen overflow-hidden'>
+    <div className='w-full overflow-hidden'>
 
       <Swiper
         loop

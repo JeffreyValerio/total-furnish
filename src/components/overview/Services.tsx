@@ -26,15 +26,15 @@ const services = [
 
 export const Services = () => {
     return (
-        <div className='max-width py-20'>
-            <div className="grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:justify-between">
+        <div className='max-width pt-20'>
+            <div className="grid justify-center grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:justify-between">
                 {services.map((item) => (
                     <React.Fragment key={item.title}>
-                        <div className='flex items-center gap-x-4'>
+                        <div className='flex items-center gap-x-4 bg-white py-4 px-8 rounded-md shadow-md hover:shadow-xl'>
                             <div className="border p-5 rounded-full border-slate-400 flex items-center justify-center">
                                 {item.icon}
                             </div>
-                            <p className='text-xl md:text-2xl uppercase'>{item.title} <br />{item.subTitle}</p>
+                            <p className='text-xl md:text-2xl uppercase flex-shrink-0'>{item.title} <br className='hidden md:block'/>{item.subTitle}</p>
                         </div>
                     </React.Fragment>
                 ))}
