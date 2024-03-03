@@ -2,23 +2,37 @@
 @tailwind components;
 @tailwind utilities; 
 
+/* 
+$gunmetal: rgba(36, 52, 69, 1);
+$oxford-blue: rgba(14, 33, 54, 1);
+$antiflash-white: rgba(233, 237, 239, 1);
+$slate-gray: rgba(115, 127, 136, 1);
+$charcoal: rgba(63, 79, 95, 1); 
+*/ 
+
 @layer base{
     *{
         @apply box-border scroll-smooth
     }
-
+ 
     a {
       @apply hover:text-blue-800 text-slate-950
+    }
+    
+    body{
+    @apply bg-antiflashWhite 
     }
 
     .max-width{
       @apply max-w-[90%] mx-auto
     }
 
-    body{
-      @apply bg-slate-100/50
-    }
-
+    .responsive-grid-4{
+      @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center gap-4
+    } 
+    .responsive-grid-3{
+      @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 items-center gap-4 justify-center
+    } 
 }
 
 @layer components{
@@ -36,6 +50,9 @@
     }
     /* HEADING SECTION */
 
+    .btn-primary{
+        @apply bg-oxfordBlue !text-white px-6 py-2 rounded text-xl hover:bg-oxfordBlue/80 transition-all duration-300 ease-in-out
+    }
     .btn-admin{
         @apply bg-blue-900 !text-white px-6 py-2 rounded text-sm hover:bg-blue-800 transition-all duration-300 ease-in-out
     }

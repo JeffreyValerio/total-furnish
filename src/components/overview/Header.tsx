@@ -12,7 +12,7 @@ export const Header = () => {
         <ul className='flex justify-between uppercase px-6'>
           <li><Link href={''}>Inicio</Link> </li>
           <li><Link href={''}>Tienda</Link> </li>
-          <li><Link href={''}>Nosotros</Link> </li>
+          <li><Link href={''}>Muestrario</Link> </li>
           <li><Link href={''}>Blog</Link> </li>
           <li><Link href={''}>Contacto</Link> </li>
         </ul>

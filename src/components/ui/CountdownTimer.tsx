@@ -42,7 +42,7 @@ export function CountdownTimer({ targetDate }: any) {
             </div>
             <div>
                 <span className='text-gray-600'>Minutos</span>
-                {timeLeft.minutes && <div className="text-4xl">{timeLeft.minutes}</div>}
+                {timeLeft.minutes && <div className="text-4xl" suppressHydrationWarning>{timeLeft.minutes}</div>}
             </div>
             <div>
                 <span className='text-gray-600'>Segundos</span>
