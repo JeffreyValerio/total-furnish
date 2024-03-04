@@ -3,7 +3,7 @@ import { ArrowRightIcon } from 'lucide-react'
 
 export const About = () => {
     return (
-        <div className='my-20 bg-white'>
+        <div className='bg-white sm:h-screen shadow-2xl'>
             <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div
                     className='h-screen bg-cover bg-fixed bg-center bg-no-repeat mb-16 lg:mb-0'

@@ -37,11 +37,11 @@ export const Header = () => {
   return (
     <div className={`${isSticky ? 'sticky top-0 z-10 bg-white transition-all ease-in-out duration-700' : ''}`}>
 
-      <div className="block lg:hidden">
+      <div className="block xl:hidden">
         <MobileHeader />
       </div>
 
-      <header className='max-width hidden lg:grid sm:grid-cols-2 justify-center sm:justify-between py-5 border-b '>
+      <header className='max-width hidden xl:grid sm:grid-cols-2 justify-center sm:justify-between py-5 border-b '>
 
         <Logo />
 
@@ -50,8 +50,8 @@ export const Header = () => {
             {menu.map((item) => (
               <li key={item.url}>
                 <Link href={item.url}
-                  className={clsx("hover:text-white hover:bg-charcoal px-6 py-2 rounded-md", {
-                    "bg-charcoal text-white": currentPath === item.url
+                  className={clsx("hover:text-white hover:bg-oxfordBlue px-6 py-2 rounded-md", {
+                    "bg-oxfordBlue text-white": currentPath === item.url
                   })}>
                   {item.label}
                 </Link>

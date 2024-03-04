@@ -35,6 +35,10 @@ $charcoal: rgba(63, 79, 95, 1);
     h6{ 
       @apply text-oxfordBlue font-bold xl:text-xl text-2xl sm:pr-4 pb-4 
     }
+
+    .animate-transition{
+      @apply transition-all ease-in-out duration-500
+    }
   
     .max-width{
       @apply max-w-[95%] mx-auto
