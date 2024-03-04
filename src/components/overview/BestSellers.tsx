@@ -8,7 +8,7 @@ export const BestSellers = () => {
         <section className='max-width 2xl:h-screen py-20 2xl:py-0 xl:grid grid-cols-4 gap-4 items-center justify-center xl:mb-0'>
             <div className="sm:col-start-1 sm:col-end-2  overflow-hidden">
 
-                <h2 className='text-oxfordBlue font-bold xl:text-5xl text-6xl sm:pr-4 pb-4'>Materiales de alta calidad</h2>
+                <h1>Materiales de alta calidad</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laboriosam repellat voluptas, sint quam vero quos est amet accusamus reprehenderit excepturi</p>
 
                 <button className='btn-primary mt-8 w-1/2 rounded-md'>Ver más</button>

@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 export const Hero = () => {
   return (
-    <div className='w-full overflow-hidden'>
+    <div className='w-full sm:h-screen overflow-hidden'>
 
       <Swiper
         loop
@@ -20,10 +20,10 @@ export const Hero = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper">
         <SwiperSlide>
-          <Image src={'/images/hero.png'} className='object-scale-down w-full' alt='hero' width={2000} height={800} />
+          <Image src={'/images/hero.png'} className='object-cover w-full h-screen' alt='hero' width={2000} height={800} />
         </SwiperSlide>
         <SwiperSlide>
-          <Image src={'/images/hero2.png'} className='object-scale-down w-full' alt='hero' width={2000} height={800} />
+          <Image src={'/images/hero2.png'} className='object-cover w-full h-screen' alt='hero' width={2000} height={800} />
         </SwiperSlide>
       </Swiper>
 

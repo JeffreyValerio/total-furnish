@@ -8,9 +8,9 @@ export const Offert = () => {
     const targetDate = new Date(currentDate.setDate(currentDate.getDate() + 6));
 
     return (
-        <div className="bg-blue-100 py-20">
+        <div className="bg-blue-100 sm:h-screen flex">
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 max-width">
+            <div className="grid grid-cols-1 lg:grid-cols-2 max-width items-center">
                 <div className="flex justify-center">
                     <Image src={'/images/offer_img.png'} width={500} height={500} alt="" />
                 </div>

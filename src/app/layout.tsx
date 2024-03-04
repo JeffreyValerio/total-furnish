@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { Footer, Header } from "@/components";
+import { Footer, Header, Sidebar } from "@/components";
 import { poppins } from "@/config/fonts";
 import Providers from "@/components/providers/Providers";
 
@@ -18,6 +18,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="es">
       <body className={poppins.className}>
         <Providers>
+          <Sidebar/>
           <Header />
           {children}
           <Footer />
