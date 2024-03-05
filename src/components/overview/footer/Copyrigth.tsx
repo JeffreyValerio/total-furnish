@@ -7,7 +7,7 @@ export const Copyrigth = () => {
         <div className='bg-oxfordBlue text-white py-4'>
             <div className="max-width flex justify-center items-center gap-x-2 flex-col">
                 <p className='font-bold uppercase'>&copy; {year} | <Data.name /> </p>
-                <p className='text-xs'>Design by <span className='font-bold tracking-wide'>Jeffrey Valerio</span></p>
+                <p className='text-xs'>Developed by <span className='font-bold tracking-wide'>Jeffrey Valerio</span></p>
             </div>
         </div>
     )

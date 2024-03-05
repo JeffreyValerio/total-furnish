@@ -31,7 +31,7 @@ export const CollectionCard = ({ title, description, features, image, url }: Pro
             <div className='absolute p-6 bottom-0 overflow-hidden translate-y-full group-hover:translate-y-0 transition-all ease-in-out duration-1000 bg-white'>
                 <div className="text-content p-5 bg-light">
                     <h3 className='text-xl sm:text-2xl font-light mb-3 sm:mb-6 uppercase'>Sobre {title}</h3>
-                    <p className='text-sm'>{description}</p>
+                    <p>{description}</p>
                     <ul className='list-disc ml-4 my-4 text-sm'>
                         {features.map((feature, index) => (
                             <li key={index} className='flex items-center gap-x-1'>
@@ -41,7 +41,7 @@ export const CollectionCard = ({ title, description, features, image, url }: Pro
                         ))}
                     </ul>
 
-                    <Link href={`${url}`} className='group rounded-md flex gap-x-2 items-center justify-center px-4 border-2 border-blue-900 w-fit hover:bg-blue-900 text-black hover:text-white h-fit'>
+                    <Link href={`${url}`} className='group rounded-md flex gap-x-2 items-center justify-center px-4 border-2 border-oxfordBlue w-fit hover:bg-oxfordBlue text-black hover:text-white h-fit'>
                         <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-extralight'>Leer más</span>
                         <ArrowRightIcon
                             strokeWidth={1}

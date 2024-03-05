@@ -11,7 +11,7 @@ const menu = [
   { url: '/', label: 'Inicio' },
   { url: '/tienda', label: 'Tienda' },
   { url: '/muestrario', label: 'Muestrario' },
-  { url: '/blog', label: 'Blog' },
+  { url: '/cotizar', label: 'Cotizar' },
   { url: '/contacto', label: 'Contacto' },
 ]
 
@@ -41,12 +41,12 @@ export const Header = () => {
         <MobileHeader />
       </div>
 
-      <header className='max-width hidden xl:grid sm:grid-cols-2 justify-center sm:justify-between py-5 border-b '>
+      <header className='max-width hidden xl:grid sm:grid-cols-2 justify-center items-center sm:justify-between py-5 border-b '>
 
         <Logo />
 
         <nav>
-          <ul className='flex justify-between uppercase px-6'>
+          <ul className='flex justify-end uppercase gap-x-2'>
             {menu.map((item) => (
               <li key={item.url}>
                 <Link href={item.url}

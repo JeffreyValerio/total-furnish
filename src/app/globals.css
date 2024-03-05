@@ -15,25 +15,25 @@ $charcoal: rgba(63, 79, 95, 1);
         @apply box-border scroll-smooth
     }
     a {
-      @apply hover:text-blue-800 text-slate-950
+      @apply hover:text-oxfordBlue text-gunmetal
     } 
     h1{ 
-      @apply text-oxfordBlue font-bold xl:text-6xl text-7xl sm:pr-4 pb-4
+      @apply text-oxfordBlue font-bold text-5xl xl:text-6xl  sm:pr-4 pb-4
     }
     h2{
-      @apply text-oxfordBlue font-bold xl:text-5xl text-6xl sm:pr-4 pb-4
+      @apply text-oxfordBlue font-light text-4xl xl:text-5xl sm:pr-4 pb-4 uppercase
     }
     h3{ 
-      @apply text-oxfordBlue font-bold xl:text-4xl text-5xl sm:pr-4 pb-4
+      @apply text-oxfordBlue font-semibold xl:text-4xl text-5xl sm:pr-4 pb-4
     }
     h4{
-      @apply text-oxfordBlue font-bold xl:text-3xl text-4xl sm:pr-4 pb-4
+      @apply text-oxfordBlue font-semibold xl:text-3xl text-4xl sm:pr-4 pb-4
     }
     h5{ 
-      @apply text-oxfordBlue font-bold xl:text-2xl text-3xl sm:pr-4 pb-4
+      @apply text-oxfordBlue font-semibold xl:text-2xl text-3xl sm:pr-4 pb-4
     }
     h6{ 
-      @apply text-oxfordBlue font-bold xl:text-xl text-2xl sm:pr-4 pb-4 
+      @apply text-oxfordBlue font-semibold xl:text-xl text-2xl sm:pr-4 pb-4 
     }
 
     .animate-transition{
@@ -68,7 +68,10 @@ $charcoal: rgba(63, 79, 95, 1);
     /* HEADING SECTION */
 
     .btn-primary{
-        @apply bg-oxfordBlue !text-white px-6 py-2 rounded text-xl hover:bg-oxfordBlue/80 transition-all duration-300 ease-in-out
+        @apply bg-oxfordBlue !text-white px-6 py-2 rounded text-xl hover:bg-oxfordBlue/90 transition-all duration-300 ease-in-out
+    }
+    .btn-primary-outline{
+        @apply border border-oxfordBlue px-6 py-2 rounded text-xl hover:bg-oxfordBlue/90 hover:text-white transition-all duration-300 ease-in-out
     }
     .btn-admin{
         @apply bg-blue-900 !text-white px-6 py-2 rounded text-sm hover:bg-blue-800 transition-all duration-300 ease-in-out
@@ -111,7 +114,7 @@ $charcoal: rgba(63, 79, 95, 1);
       @apply text-slate-700 mb-2 block text-sm
     }
     p {
-      @apply font-light text-sm
+      @apply font-light text-base
     }
 
 }

@@ -11,10 +11,10 @@ export const FeaturesProducts = () => {
             <div className='py-20 max-width'>
 
                 <div className="flex flex-wrap justify-between gap-4 items-center mb-10">
-                    <h2 className='heading'>Productos destacados</h2>
+                    <h2>Productos destacados</h2>
 
-                    <Link href={'/about'} className='group rounded-md flex gap-x-2 items-center justify-center px-4 border-2 border-blue-900 w-fit hover:bg-blue-900 hover:text-white h-fit'>
-                        <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-extralight'>Ver todos</span>
+                    <Link href={'/about'} className='group rounded-md flex gap-x-2 items-center justify-center px-4 border-2 border-oxfordBlue w-fit hover:bg-oxfordBlue hover:text-white h-fit'>
+                        <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-light'>Ver todos</span>
                         <ArrowRightIcon
                             strokeWidth={1}
                             size={18}

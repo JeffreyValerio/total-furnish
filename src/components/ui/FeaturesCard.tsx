@@ -1,3 +1,4 @@
+import { PlusIcon, ShoppingBagIcon } from 'lucide-react'
 import Image from 'next/image'
 
 export const FeaturesCard = () => {
@@ -11,9 +12,11 @@ export const FeaturesCard = () => {
                     alt='' />
             </div>
 
-            <h3 className='uppercase py-4 text-2xl text-[#787d62]'>Product Name</h3>
-            <p>$200</p>
-            <p className='uppercase'>add to cart</p>
+            <h2 className='uppercase py-4 text-2xl text-charcoal'>Product Name</h2>
+            <p className='text-xl font-bold'>$200</p>
+            <button className='uppercase flex items-center gap-x-2 btn-primary-outline mt-3 justify-center text-sm'>
+                <ShoppingBagIcon strokeWidth={1} size={18} /> add to cart
+            </button>
         </div>
     )
 }
