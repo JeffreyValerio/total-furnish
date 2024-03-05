@@ -41,7 +41,7 @@ $charcoal: rgba(63, 79, 95, 1);
     }
   
     .max-width{
-      @apply max-w-[95%] mx-auto
+      @apply max-w-[90%] mx-auto
     }
 
     .responsive-grid-4{
