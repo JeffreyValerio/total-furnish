@@ -42,11 +42,11 @@ export const CollectionCard = ({ title, description, features, image, url }: Pro
                     </ul>
 
                     <Link href={`${url}`} className='group rounded-md flex gap-x-2 items-center justify-center px-4 border-2 border-oxfordBlue w-fit hover:bg-oxfordBlue text-black hover:text-white h-fit'>
-                        <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-extralight'>Leer más</span>
+                        <span className='transition-all ease-in-out duration-300 uppercase font-extralight'>Leer más</span>
                         <ArrowRightIcon
                             strokeWidth={1}
                             size={18}
-                            className='group-hover:translate-x-2 transition-all ease-in-out duration-300' />
+                        />
                     </Link>
                 </div>
             </div>

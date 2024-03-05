@@ -1,7 +1,6 @@
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 
 export const BestSellers = () => {
     return (
@@ -13,7 +12,7 @@ export const BestSellers = () => {
                     <h1>Materiales de alta calidad</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laboriosam repellat voluptas, sint quam vero quos est amet accusamus reprehenderit excepturi</p>
 
-                    <Link href={'/'} className='btn-primary mt-8 justify-center w-1/2 rounded-md group flex items-center gap-x-3'>
+                    <Link href={'/'} className='btn-primary mt-8 justify-center sm:w-1/2 rounded-md group flex items-center gap-x-3'>
                         <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-extralight'>Ver más</span>
                         <ArrowRightIcon
                             strokeWidth={1}
