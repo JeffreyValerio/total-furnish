@@ -13,7 +13,7 @@ export const Hero = () => {
       <Swiper
         loop
         autoplay={{
-          delay: 2500,
+          delay: 5500,
           disableOnInteraction: false,
         }}
         spaceBetween={30}

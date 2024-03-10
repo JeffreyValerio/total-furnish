@@ -11,8 +11,6 @@ const menu = [
   { url: '/', label: 'Inicio' },
   { url: '/tienda', label: 'Tienda' },
   { url: '/muestrario', label: 'Muestrario' },
-  { url: '/cotizar', label: 'Cotizar' },
-  { url: '/contacto', label: 'Contacto' },
 ]
 
 export const Header = () => {
@@ -50,13 +48,19 @@ export const Header = () => {
             {menu.map((item) => (
               <li key={item.url}>
                 <Link href={item.url}
-                  className={clsx("hover:text-white hover:bg-oxfordBlue px-6 py-2 rounded-md", {
-                    "bg-oxfordBlue text-white": currentPath === item.url
+                  className={clsx("hover:underline px-6 py-2 rounded-md", {
+                    "underline font-bold": currentPath === item.url
                   })}>
                   {item.label}
                 </Link>
               </li>
             ))}
+
+            <li>
+              <Link href={'/cotizar'} className='btn-primary text-base font-bold tracking-wide'>
+                Cotizar
+              </Link>
+            </li>
           </ul>
         </nav>
 

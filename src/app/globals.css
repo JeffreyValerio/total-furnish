@@ -18,7 +18,7 @@ $charcoal: rgba(63, 79, 95, 1);
       @apply hover:text-oxfordBlue text-gunmetal
     } 
     h1{ 
-      @apply text-oxfordBlue font-bold text-5xl xl:text-6xl  sm:pr-4 pb-4
+      @apply text-oxfordBlue font-bold text-5xl xl:text-6xl sm:pr-4 pb-4
     }
     h2{
       @apply text-oxfordBlue font-light text-4xl xl:text-5xl sm:pr-4 pb-4 uppercase

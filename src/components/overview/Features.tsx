@@ -3,16 +3,18 @@ import React from 'react'
 import Link from 'next/link'
 
 import { ArrowRightIcon } from 'lucide-react'
-import { FeaturesCard } from '..'
+import { FeaturesCard, VerticalText } from '..'
 
 export const FeaturesProducts = () => {
     return (
-        <div className="bg-antiflashWhite">
+        <div className="bg-antiflashWhite relative">
+
+            <VerticalText textLeft='Productos' textRight='destacados'/>
+            
             <div className='py-20 max-width'>
 
-                <div className="flex flex-wrap justify-between gap-4 items-center mb-10">
-                    <h2>Productos destacados</h2>
-
+                <h2 className='sm:hidden'>Productos destacados</h2>
+                <div className="flex flex-wrap justify-between sm:justify-end gap-4 items-center mb-10">
                     <Link href={'/about'} className='group rounded-md flex gap-x-2 items-center justify-center px-4 border-2 border-oxfordBlue w-fit hover:bg-oxfordBlue hover:text-white h-fit'>
                         <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-light'>Ver todos</span>
                         <ArrowRightIcon

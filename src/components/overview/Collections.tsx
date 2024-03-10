@@ -14,7 +14,7 @@ const collections = [
         url: '/rooms'
     },
     {
-        title: 'Kitchen',
+        title: 'Cocinas',
         description: 'Assumenda temporibus quidem ipsam. fuga corporis iusto similique voluptates sint quibusdam.',
         image: '/images/kitchen.jpg',
         features: [
@@ -25,7 +25,7 @@ const collections = [
         url: '/rooms'
     },
     {
-        title: 'Room',
+        title: 'Habitaciones',
         description: 'Assumenda temporibus quidem ipsam. fuga corporis iusto similique voluptates sint quibusdam.',
         image: '/images/rooms.jpg',
         features: [

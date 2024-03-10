@@ -9,8 +9,8 @@ export const BestSellers = () => {
             <section className='max-width 2xl:h-screen py-20 2xl:py-0 xl:grid grid-cols-4 gap-4 items-center justify-center xl:mb-0'>
                 <div className="sm:col-start-1 sm:col-end-2  overflow-hidden">
 
-                    <h1>Materiales de alta calidad</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laboriosam repellat voluptas, sint quam vero quos est amet accusamus reprehenderit excepturi</p>
+                    <h1>Sillas de oficina</h1>
+                    <p>¡Mejora tu espacio de trabajo con nuestras sillas ergonómicas y elegantes! Encuentra la comodidad que necesitas para ser más productivo.</p>
 
                     <Link href={'/'} className='btn-primary mt-8 justify-center sm:w-1/2 rounded-md group flex items-center gap-x-3'>
                         <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-extralight'>Ver más</span>

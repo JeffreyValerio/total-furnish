@@ -13,7 +13,9 @@ export default function HomePage() {
       <Services />
 
       <BestSellers />
+
       <FeaturesProducts />
+
       <About />
 
       {/* <p>testimonials</p> */}
