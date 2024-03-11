@@ -2,21 +2,21 @@
 @tailwind components;
 @tailwind utilities; 
 
-/* 
-$gunmetal: rgba(36, 52, 69, 1);
-$oxford-blue: rgba(14, 33, 54, 1);
-$antiflash-white: rgba(233, 237, 239, 1);
-$slate-gray: rgba(115, 127, 136, 1);
-$charcoal: rgba(63, 79, 95, 1); 
-*/ 
+/*
+  gunmetal
+  oxford-blue
+  antiflash-white
+  slate-gray
+  charcoal 
+*/
 
 @layer base{
     *{
         @apply box-border scroll-smooth
     }
-    a {
+    /* a {
       @apply hover:text-oxfordBlue text-gunmetal
-    } 
+    }  */
     h1{ 
       @apply text-oxfordBlue font-bold text-5xl xl:text-6xl sm:pr-4 pb-4
     }

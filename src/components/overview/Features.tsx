@@ -7,7 +7,7 @@ import { FeaturesCard, VerticalText } from '..'
 
 export const FeaturesProducts = () => {
     return (
-        <div className="bg-antiflashWhite relative">
+        <div className="bg-antiflashWhite relative overflow-hidden">
 
             <VerticalText textLeft='Productos' textRight='destacados'/>
             

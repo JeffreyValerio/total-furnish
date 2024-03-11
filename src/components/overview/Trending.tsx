@@ -5,7 +5,7 @@ import { ArrowRightIcon } from "lucide-react"
 
 export const Trending = () => {
     return (
-        <div className="relative">
+        <div className="relative overflow-hidden">
             <VerticalText textLeft="Tendencias" textRight="2024" />
             <div className='py-20 max-width'>
 

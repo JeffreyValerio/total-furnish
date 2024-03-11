@@ -10,6 +10,7 @@ import { MobileHeader } from './MobileHeader';
 const menu = [
   { url: '/', label: 'Inicio' },
   { url: '/tienda', label: 'Tienda' },
+  { url: '/catalogo', label: 'Catálogo' },
   { url: '/muestrario', label: 'Muestrario' },
 ]
 
