@@ -3,13 +3,11 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import { Brand, Category, Product, Supplier, Warranty } from "@prisma/client";
+import { Brand, Category, ProductType, Supplier, Warranty } from "@prisma/client";
 import { CreateUpdateProduct, deleteProductImage } from "@/actions";
 import { useForm } from "react-hook-form";
 import { useToaster } from "@/components/providers/ToastifyContext";
 import { DeleteProductButton } from "./DeleteButton";
-import { X } from "lucide-react";
-import Link from "next/link";
 import { BackButton, ProductImage } from "@/components";
 import { IProduct, ProductImage as ProductWithImage } from '@/interfaces/Product.interface'
 
@@ -34,6 +32,8 @@ interface FormData {
 
   images?: FileList;
   imageUrls?: string;
+
+  type: ProductType;
 
   brandId: string
   categoryId: string
@@ -74,10 +74,13 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
       setValue('categoryId', `${product.categoryId}`)
       setValue('supplierId', `${product.supplierId}`)
       setValue('warrantyId', `${product.warrantyId}`)
+      // setValue('type', `${product.type.}`)
     }
   }, [product, setValue])
 
   const onSubmit = async (data: FormData) => {
+
+    console.log(data)
     const formData = new FormData()
 
     const { images, imageUrls, ...productToSave } = data;
@@ -96,6 +99,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
     formData.append("height", `${productToSave.height}`);
     formData.append("weight", `${productToSave.weight}`);
 
+    formData.append('type', productToSave.type)
     formData.append('brandId', productToSave.brandId)
     formData.append("categoryId", productToSave.categoryId)
     formData.append('supplierId', productToSave.supplierId)
@@ -196,6 +200,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 ))}
               </select>
             </div>
+
             <div className="flex flex-col mb-2">
               <label htmlFor='categoryId' className='input-label'>Categoría</label>
               <select
@@ -237,6 +242,21 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                     {supplier.name}
                   </option>
                 ))}
+              </select>
+            </div>
+
+            <div className="flex flex-col mb-2">
+
+              <label htmlFor='type' className='input-label'>Tipo</label>
+
+              <select
+                className="bg-slate-200 outline-none focus:ring-1 p-2 rounded text-sm"
+                {...register("type", { required: true })}
+              >
+                <option value="GENERAL">GENERAL</option>
+                <option value="BESTSELLER">BESTSELLER</option>
+                <option value="FEATURE">FEATURE</option>
+                <option value="TRENDING">TRENDING</option>
               </select>
             </div>
           </div>
@@ -290,7 +310,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              {product.ProductImage?.map((image) => (
+              {product.ProductImage?.map((image: any) => (
                 <div key={image.id}>
                   <ProductImage
                     alt={product.name ?? ""}

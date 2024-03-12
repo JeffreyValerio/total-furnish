@@ -1,4 +1,4 @@
-import { Brand, Category, Supplier, Warranty } from "@prisma/client";
+import { Brand, Category, ProductType, Supplier, Warranty } from "@prisma/client";
 
 export interface IProduct {
     [x: string]: any
@@ -19,14 +19,15 @@ export interface IProduct {
     updatedAt: Date;
     brand: Brand;
     category: Category;
-    warranty: Warranty;
-    supplier: Supplier;
+    type: ProductType
     ProductImage: ProductImage[];
+    supplier?: Supplier;
+    warranty?: Warranty;
 }
 
 export interface ProductImage {
-    id: number
-    url: string;
+    id?: number
+    url?: string;
 }
 
 // export interface IProduct {

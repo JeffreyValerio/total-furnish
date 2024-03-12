@@ -1,7 +1,15 @@
-import { PlusIcon, ShoppingBagIcon } from 'lucide-react'
+import { ShoppingBagIcon } from 'lucide-react'
 import Image from 'next/image'
+import { ProductCardSkeleton } from '..'
+import { Product } from '@prisma/client'
 
-export const FeaturesCard = () => {
+interface Props {
+    product: Product
+}
+export const FeaturesCard = ({ product }: Props) => {
+    if (!product) {
+        return <ProductCardSkeleton />
+    }
     return (
         <div className='w-full group'>
             <div className="overflow-hidden group-hover:scale-[.97] transition-all ease-in-out duration-500">

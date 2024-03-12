@@ -40,7 +40,7 @@ export const Collections = () => {
     return (
         <div className="bg-antiflashWhite">
             <div className='py-20 max-width'>
-                <h2 className='mb-10'>Collections</h2>
+                <h2 className='mb-10'>Colecciones</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6">
                     {collections.map((collection) => (

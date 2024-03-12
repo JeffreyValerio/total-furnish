@@ -1,10 +1,23 @@
+import { getPaginatedProducts } from "@/actions";
 import { About, BestSellers, Collections, Customers, FeaturesProducts, Hero, Offert, Process, Services, Trending } from "@/components";
 
 export const metadata = {
   title: 'Página principal',
   description: 'Página principal',
 };
-export default function HomePage() {
+
+
+interface Props {
+  searchParams: {
+    page?: string
+  }
+}
+
+export default async function HomePage({ searchParams }: Props) {
+
+  const page = searchParams.page ? parseInt(searchParams.page) : 1
+  const { products, totalPages } = await getPaginatedProducts({ page })
+
   return (
     <div>
       <Hero />
@@ -13,7 +26,7 @@ export default function HomePage() {
 
       <BestSellers />
 
-      <FeaturesProducts />
+      <FeaturesProducts products={products} />
 
       <About />
 
@@ -23,7 +36,7 @@ export default function HomePage() {
 
       {/* <p>suscribe</p> */}
 
-      <Trending />
+      <Trending products={products}/>
 
       <Process />
 

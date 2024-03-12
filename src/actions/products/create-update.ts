@@ -21,6 +21,7 @@ const productSchema = z.object({
     weight: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),
 
     brandId: z.string().uuid(),
+    type: z.enum(['BESTSELLER', 'FEATURE', 'GENERAL', 'TRENDING']),
     categoryId: z.string().uuid(),
     supplierId: z.string().uuid(),
     warrantyId: z.string().uuid(),

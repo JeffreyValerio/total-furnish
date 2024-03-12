@@ -59,6 +59,13 @@ model Warranty {
   product     Product[]
 }
 
+enum ProductType {
+  BESTSELLER
+  FEATURE
+  GENERAL
+  TRENDING
+}
+
 model Supplier {
   id        String    @id @default(uuid())
   name      String
@@ -82,6 +89,8 @@ model Product {
   depth  Int @default(0)
   height Int @default(0)
   weight Int @default(0)
+
+  type ProductType @default(GENERAL)
 
   ProductImage ProductImage[]
 
