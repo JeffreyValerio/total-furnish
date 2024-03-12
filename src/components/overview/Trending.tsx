@@ -25,11 +25,11 @@ export const Trending = ({ products }: Props) => {
                                 className='group-hover:translate-x-2 transition-all ease-in-out duration-300' />
                         </Link>
                     </div>
-                </div> 
+                </div>
 
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {products?.map((product) => (
+                    {products?.map((product) => (
                         product.type === 'TRENDING' && (
                             <React.Fragment key={product.id}>
                                 <ProductCard product={product ?? {}} />

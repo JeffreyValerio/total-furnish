@@ -12,7 +12,7 @@ interface Props {
 
 export const FeaturesProducts = ({ products }: Props) => {
     return (
-        <div className="bg-antiflashWhite relative overflow-hidden">
+        <div className="relative overflow-hidden">
 
             {/* <VerticalText textLeft='Productos' textRight='destacados' /> */}
 

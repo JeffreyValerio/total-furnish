@@ -1,8 +1,14 @@
+import { IProduct } from '@/interfaces'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import React from 'react'
 
-export const BestSellers = () => {
+interface Props {
+    products: IProduct[]
+}
+
+export const BestSellers = ({ products }: Props) => {
     return (
         <div className="shadow-2xl drop-shadow-2xl transition-shadow">
 
@@ -23,26 +29,22 @@ export const BestSellers = () => {
 
                 <div className="sm:col-start-2 sm:col-end-5 responsive-grid-3 mt-20 xl:mt-0">
 
-                    <Link href={'/'} className="text-center relative overflow-hidden group rounded-md pb-8 mx-auto">
-                        <div className="absolute top-0 left-0 right-0 h-96 !bg-slateGray/20 content-[''] translate-y-96 group-hover:translate-y-48 transition-all ease-in-out duration-500 -z-10 rounded-md" />
-                        <Image src={'/images/chair.png'} alt='chair' width={300} height={300} />
-                        <p className='mb-2'>Product name</p>
-                        <p className='font-bold text-xl'>$75</p>
-                    </Link>
-
-                    <Link href={'/'} className="text-center relative overflow-hidden group rounded-md pb-8 mx-auto">
-                        <div className="absolute top-0 left-0 right-0 h-96 bg-slateGray/20 content-[''] translate-y-96 group-hover:translate-y-48 transition-all ease-in-out duration-500 -z-10 rounded-md" />
-                        <Image src={'/images/chair.png'} alt='chair' width={300} height={300} />
-                        <p className='mb-2'>Product name</p>
-                        <p className='font-bold text-xl'>$75</p>
-                    </Link>
-
-                    <Link href={'/'} className="text-center relative overflow-hidden group rounded-md pb-8 mx-auto">
-                        <div className="absolute top-0 left-0 right-0 h-96 bg-slateGray/20 content-[''] translate-y-96 group-hover:translate-y-48 transition-all ease-in-out duration-500 -z-10 rounded-md" />
-                        <Image src={'/images/chair.png'} alt='chair' width={300} height={300} />
-                        <p className='mb-2'>Product name</p>
-                        <p className='font-bold text-xl'>$75</p>
-                    </Link>
+                    {products?.map((product) => (
+                        product.type === 'BESTSELLER' && (
+                            <React.Fragment key={product.id}>
+                                <Link href={product.slug} className="text-center relative overflow-hidden group rounded-md pb-8 mx-auto">
+                                    <div className="absolute top-0 left-0 right-0 h-96 !bg-slateGray/20 content-[''] translate-y-96 group-hover:translate-y-48 transition-all ease-in-out duration-500 -z-10 rounded-md" />
+                                    <Image src={`${product.images[0]}`}
+                                        alt={product.name}
+                                        width={900} height={300}
+                                        className='w-[300px] h-[300px]'
+                                    />
+                                    <p className='mb-2'>{product.name}</p>
+                                    <p className='font-bold text-xl'>$75</p>
+                                </Link>
+                            </React.Fragment>
+                        )
+                    ))}
                 </div>
             </section>
         </div>

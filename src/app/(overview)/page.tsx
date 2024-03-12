@@ -24,7 +24,7 @@ export default async function HomePage({ searchParams }: Props) {
 
       <Services />
 
-      <BestSellers />
+      <BestSellers products={products} />
 
       <FeaturesProducts products={products} />
 
