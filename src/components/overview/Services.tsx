@@ -14,8 +14,8 @@ const services = [
     },
     {
         icon: <TruckIcon size={32} strokeWidth={1} />,
-        title: 'Entrega',
-        subTitle: 'gratis (GAM)'
+        title: 'ENTREGAS EN',
+        subTitle: 'TODO EL PAÍS'
     },
     {
         icon: <ShieldCheckIcon size={32} strokeWidth={1} />,

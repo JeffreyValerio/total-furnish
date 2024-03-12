@@ -33,7 +33,7 @@ export const BestSellers = ({ products }: Props) => {
                         product.type === 'BESTSELLER' && (
                             <React.Fragment key={product.id}>
                                 <Link href={product.slug} className="text-center relative overflow-hidden group rounded-md pb-8 mx-auto">
-                                    <div className="absolute top-0 left-0 right-0 h-96 !bg-slateGray/20 content-[''] translate-y-96 group-hover:translate-y-48 transition-all ease-in-out duration-500 -z-10 rounded-md" />
+                                    <div className="absolute top-0 left-0 right-0 h-96 !bg-slateGray/20 content-[''] translate-y-[500px] group-hover:translate-y-48 transition-all ease-in-out duration-500 -z-10 rounded-md" />
                                     <Image src={`${product.images[0]}`}
                                         alt={product.name}
                                         width={900} height={300}
