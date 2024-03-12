@@ -1,4 +1,4 @@
-import { About, BestSellers, Collections, Customers, FeaturesProducts, Hero, Offert, Services, Trending } from "@/components";
+import { About, BestSellers, Collections, Customers, FeaturesProducts, Hero, Offert, Process, Services, Trending } from "@/components";
 
 export const metadata = {
   title: 'Página principal',
@@ -24,6 +24,8 @@ export default function HomePage() {
       {/* <p>suscribe</p> */}
 
       <Trending />
+
+      <Process />
 
       <Offert />
 

@@ -12,6 +12,7 @@ export * from '@/components/overview/Hero'
 export * from '@/components/overview/Offert'
 export * from '@/components/overview/Services'
 export * from '@/components/overview/Trending'
+export * from '@/components/overview/Process'
 export * from '@/components/providers/Providers'
 
 export * from '@/components/shared/Logo'

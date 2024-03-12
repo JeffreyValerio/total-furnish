@@ -16,14 +16,14 @@ export const Hero = () => {
           delay: 5500,
           disableOnInteraction: false,
         }}
-        spaceBetween={30}
+        spaceBetween={0}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper">
 
         <SwiperSlide>
-          <div className="hero min-h-screen bg-base-200"
+          <div className="hero min-h-screen bg-base-200 !bg-cover !bg-center"
             style={{
-              background: "url('/images/hero.png')",
+              background: "url('/images/hero.png')"
             }}>
             <div className='w-full max-width'>
               <h1 className="text-5xl font-bold">Box Office News!</h1>
@@ -34,7 +34,7 @@ export const Hero = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="hero min-h-screen bg-base-200"
+          <div className="hero min-h-screen bg-base-200 !bg-cover !bg-center"
             style={{
               background: "url('/images/hero2.png')",
             }}>
