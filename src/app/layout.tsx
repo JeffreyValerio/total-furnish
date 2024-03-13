@@ -18,10 +18,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="es" data-theme="light">
       <body className={poppins.className}>
         <Providers>
-          <Sidebar />
-          <Header />
           {children}
-          <Footer />
         </Providers>
       </body>
     </html>

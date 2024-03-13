@@ -3,8 +3,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: {
-        template: '%s',
-        default: 'Página principal'
+        template: '%s | Administrador',
+        default: 'ADMIN'
     },
     description: 'Admin',
 }
