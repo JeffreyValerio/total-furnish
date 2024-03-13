@@ -49,7 +49,7 @@ export const Process = () => {
                     <div className="timeline-end mb-10">
                         <time className="font-mono italic">PASO 4</time>
                         <div className="text-lg font-black">Proceso de fabricación</div>
-                        <p>Cada paso del proceso de fabricación se realiza con pasión y atención al detalle para garantizar resultados excepcionales.</p>
+                        <p>Cada paso del proceso de fabricación se realiza con pasión y atención al detalle para garantizar resultados excepcionales</p>
                     </div>
                     <hr />
                 </li>
