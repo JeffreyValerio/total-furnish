@@ -20,6 +20,9 @@ const productSchema = z.object({
     height: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),
     weight: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),
 
+    cost: z.coerce.number().min(0).transform(val => Number(val.toFixed(2))),
+    price: z.coerce.number().min(0).transform(val => Number(val.toFixed(2))),
+
     brandId: z.string().uuid(),
     type: z.enum(['BESTSELLER', 'FEATURE', 'GENERAL', 'TRENDING']),
     categoryId: z.string().uuid(),

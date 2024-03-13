@@ -11,6 +11,10 @@ export interface IProduct {
     depth: number;
     height: number;
     weight: number;
+
+    cost: number
+    price: number
+
     brandId: string;
     supplierId: string;
     warrantyId: string;

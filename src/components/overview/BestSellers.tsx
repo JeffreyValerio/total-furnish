@@ -1,4 +1,5 @@
 import { IProduct } from '@/interfaces'
+import { currencyFormat } from '@/utils'
 import { ArrowRightIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -40,7 +41,7 @@ export const BestSellers = ({ products }: Props) => {
                                         className='w-[300px] h-[300px]'
                                     />
                                     <p className='mb-2'>{product.name}</p>
-                                    <p className='font-bold text-xl'>$75</p>
+                                    <p className='font-bold text-xl'>{currencyFormat(product.price)}</p>
                                 </Link>
                             </React.Fragment>
                         )

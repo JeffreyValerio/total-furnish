@@ -90,6 +90,9 @@ model Product {
   height Int @default(0)
   weight Int @default(0)
 
+  cost Float @default(0)
+  price Float @default(0)
+
   type ProductType @default(GENERAL)
 
   ProductImage ProductImage[]

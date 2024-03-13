@@ -30,6 +30,9 @@ interface FormData {
   height: number
   weight: number
 
+  cost: number
+  price: number
+
   images?: FileList;
   imageUrls?: string;
 
@@ -70,6 +73,9 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
       setValue("height", Number(product.height))
       setValue("weight", Number(product.weight))
 
+      setValue("cost", Number(product.cost))
+      setValue("price", Number(product.price))
+
       setValue('brandId', `${product.brandId}`)
       setValue('categoryId', `${product.categoryId}`)
       setValue('supplierId', `${product.supplierId}`)
@@ -98,6 +104,9 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
     formData.append("depth", `${productToSave.depth}`);
     formData.append("height", `${productToSave.height}`);
     formData.append("weight", `${productToSave.weight}`);
+
+    formData.append("cost", `${productToSave.cost}`);
+    formData.append("price", `${productToSave.price}`);
 
     formData.append('type', productToSave.type)
     formData.append('brandId', productToSave.brandId)
@@ -263,6 +272,24 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
 
           {/* THRID COLUMN */}
           <div>
+            <div className="flex flex-col mb-2">
+              <label htmlFor='cost' className='input-label'>Costo</label>
+              <input
+                type="number"
+                min={0}
+                {...register("cost", { required: true, min: 0 })}
+              />
+            </div>
+
+            <div className="flex flex-col mb-2">
+              <label htmlFor='price' className='input-label'>Precio</label>
+              <input
+                type="number"
+                min={0}
+                {...register("price", { required: true, min: 0 })}
+              />
+            </div>
+
             <div className="flex flex-col mb-2">
               <label htmlFor='front' className='input-label'>Frente</label>
               <input
