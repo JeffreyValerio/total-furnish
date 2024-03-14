@@ -319,6 +319,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 {...register("front", { required: true, min: 0 })}
               />
             </div>
+
             <div className="flex flex-col mb-2">
               <label htmlFor='depth' className='input-label'>Profundidad</label>
               <input
@@ -327,6 +328,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 {...register("depth", { required: true, min: 0 })}
               />
             </div>
+
             <div className="flex flex-col mb-2">
               <label htmlFor='height' className='input-label'>Altura</label>
               <input
@@ -335,6 +337,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 {...register("height", { required: true, min: 0 })}
               />
             </div>
+            
             <div className="flex flex-col mb-2">
               <label htmlFor='weight' className='input-label'>Peso</label>
               <input
@@ -365,15 +368,15 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                     src={image.url}
                     width={300}
                     height={300}
-                    className="rounded shadow-md bg-slate-300"
+                    className="bg-slate-300 rounded-t-md h-[50px] bg-cover"
                   />
 
                   <button
                     type="button"
                     onClick={() => deleteProductImage(image.id, image.url)}
-                    className="btn-delete"
+                    className="btn-delete rounded-b-md"
                   >
-                    <X className="flex-shrink-0" strokeWidth={1}/>
+                    <X className="flex-shrink-0" size={24} strokeWidth={1}/>
                   </button>
                 </div>
               ))}
