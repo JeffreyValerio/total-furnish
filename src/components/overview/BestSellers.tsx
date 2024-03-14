@@ -19,7 +19,7 @@ export const BestSellers = ({ products }: Props) => {
                     <h1>Sillas de oficina</h1>
                     <p>¡Mejora tu espacio de trabajo con nuestras sillas ergonómicas y elegantes! Encuentra la comodidad que necesitas para ser más productivo.</p>
 
-                    <Link href={'/'} className='btn-primary mt-8 justify-center sm:w-1/2 rounded-md group flex items-center gap-x-3'>
+                    <Link href={'/'} className='btn-primary mt-8 justify-center sm:w-1/2 rounded-md group flex items-center gap-x-2'>
                         <span className='group-hover:-translate-x-2 transition-all ease-in-out duration-300 uppercase font-extralight'>Ver más</span>
                         <ArrowRightIcon
                             strokeWidth={1}

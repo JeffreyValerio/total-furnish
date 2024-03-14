@@ -12,6 +12,7 @@ import { BackButton, ProductImage } from "@/components";
 import { IProduct, ProductImage as ProductWithImage } from '@/interfaces/Product.interface'
 import { currencyFormat } from "@/utils";
 import { X } from "lucide-react";
+import clsx from "clsx";
 
 interface Props {
   product: Partial<IProduct> & { ProductImage?: ProductWithImage[] }
@@ -337,7 +338,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 {...register("height", { required: true, min: 0 })}
               />
             </div>
-            
+
             <div className="flex flex-col mb-2">
               <label htmlFor='weight' className='input-label'>Peso</label>
               <input
@@ -376,7 +377,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                     onClick={() => deleteProductImage(image.id, image.url)}
                     className="btn-delete rounded-b-md"
                   >
-                    <X className="flex-shrink-0" size={24} strokeWidth={1}/>
+                    <X className="flex-shrink-0" size={24} strokeWidth={1} />
                   </button>
                 </div>
               ))}
