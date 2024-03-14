@@ -1,5 +1,5 @@
 import React from "react"
-import { FeaturesCard, ProductCard, VerticalText } from ".."
+import { ProductCard, VerticalText } from ".."
 import Link from "next/link"
 import { ArrowRightIcon } from "lucide-react"
 import { IProduct } from "@/interfaces"
