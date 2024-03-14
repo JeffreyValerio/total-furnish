@@ -18,7 +18,7 @@ export const CollectionCard = ({ title, description, features, image, url }: Pro
                 <Link href={`${url}`}>
                     {title}
                 </Link>
-            </h2>
+            </h2> 
 
             <div className="overflow-hidden transition-all ease-in-out duration-500">
                 <Image
