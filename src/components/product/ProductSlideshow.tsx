@@ -42,7 +42,7 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
                 {images.map(image => (
                     <SwiperSlide key={image}>
                         <Image
-                            className='!bg-cover rounded-2xl border border-500-red '
+                            className='!object-scale-down rounded-2xl border border-500-red '
                             src={image.startsWith('http') ? image : `/images/placeholder.jpg`}
                             fill
                             quality={25}
@@ -62,7 +62,7 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
             >
                 {images.map(image => (
                     <SwiperSlide key={image} className='!h-24 hover:shadow-md hover:drop-shadow-md bg-slate-100 rounded-2xl'>
-                        <Image className='rounded-md !h-24'
+                        <Image className='rounded-md !h-24 object-scale-down'
                             src={image.startsWith('http') ? image : `/images/placeholder.jpg`}
                             width={200}
                             height={200}
