@@ -42,7 +42,7 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
                 {images.map(image => (
                     <SwiperSlide key={image}>
                         <Image
-                            className='!object-scale-down bg-slate-100 rounded-2xl border border-500-red '
+                            className='!object-scale-down bg-slate-100 rounded-2xl '
                             src={image.startsWith('http') ? image : `/images/placeholder.jpg`}
                             fill
                             quality={25}
