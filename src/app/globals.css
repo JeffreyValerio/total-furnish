@@ -77,7 +77,7 @@
         @apply bg-blue-900 !text-white px-6 py-2 rounded text-sm hover:bg-blue-800 transition-all duration-300 ease-in-out
     }
     .btn-delete{
-        @apply flex justify-center items-center w-full bg-red-900 !text-white px-6 py-2 rounded hover:bg-red-800 transition-all duration-300 ease-in-out
+        @apply flex justify-center items-center w-full bg-red-900 !text-white hover:bg-red-800 transition-all duration-300 ease-in-out
     }
      
     .not-allowed {
@@ -106,8 +106,8 @@
     }
     form {
       @apply w-fit rounded-md p-8 bg-white shadow-md
-    }
-    form input {
+    } 
+    form input, textarea {
       @apply bg-slate-200 outline-none focus:ring-1 p-2 rounded text-sm
     }
     form .input-label{

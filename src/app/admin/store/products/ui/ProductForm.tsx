@@ -10,6 +10,8 @@ import { useToaster } from "@/components/providers/ToastifyContext";
 import { DeleteProductButton } from "./DeleteButton";
 import { BackButton, ProductImage } from "@/components";
 import { IProduct, ProductImage as ProductWithImage } from '@/interfaces/Product.interface'
+import { currencyFormat } from "@/utils";
+import { X } from "lucide-react";
 
 interface Props {
   product: Partial<IProduct> & { ProductImage?: ProductWithImage[] }
@@ -49,8 +51,10 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
   const router = useRouter()
   const { showToast } = useToaster()
   const [formModified, setFormModified] = useState(false);
+  const [margin, setMargin] = useState(0)
+  const [markup, setMarkup] = useState(0)
 
-  const { handleSubmit, register, formState: { errors }, setValue } = useForm<FormData>({
+  const { handleSubmit, register, watch, formState: { errors }, setValue } = useForm<FormData>({
     defaultValues: {
       ...product,
       tags: product.tags?.join(", "),
@@ -58,9 +62,18 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
     }
   });
 
-  const handleInputChange = () => {
-    setFormModified(true);
-  };
+  const cost = watch("cost");
+  const price = watch("price");
+
+  useEffect(() => {
+    if (cost && price) {
+      const marginValue = ((price - cost) / price) * 100;
+      const markupValue = ((price - cost) / cost) * 100
+
+      setMargin(marginValue);
+      setMarkup(markupValue);
+    }
+  }, [cost, price]);
 
   useEffect(() => {
     if (product.id) {
@@ -148,18 +161,19 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
     <div className="form-container px-8">
       <form
         onSubmit={handleSubmit(onSubmit)}
-        onChange={handleInputChange}>
+        onChange={() => setFormModified(true)}>
         <div className="flex flex-col mb-2 relative">
           <BackButton />
         </div>
 
         <div className="grid grid-cols-4 gap-x-4">
-          {/* // FIRST COLUMN */}
+          {/* FIRST COLUMN */}
           <div>
             <div className="flex flex-col mb-2 relative">
               <label htmlFor="name" className="input-label">Nombre</label>
-              <input
-                type="text"
+              <textarea
+                rows={4}
+                className="h-fit"
                 {...register('name', {
                   required: 'El nombre es un valor requerido',
                   minLength: 3
@@ -190,6 +204,11 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 type="text"
                 {...register("tags")}
               />
+            </div>
+
+            <div className="flex flex-col mt-6">
+              <p><span className="font-bold">Margen bruto:</span> (% {margin.toFixed(2)}) </p>
+              <p><span className="font-bold">Markup:</span> (% {markup.toFixed(2)}) </p>
             </div>
           </div>
 
@@ -276,15 +295,17 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
               <label htmlFor='cost' className='input-label'>Costo</label>
               <input
                 type="number"
+                step={0.01}
                 min={0}
                 {...register("cost", { required: true, min: 0 })}
               />
             </div>
 
             <div className="flex flex-col mb-2">
-              <label htmlFor='price' className='input-label'>Precio</label>
+              <label htmlFor='price' className='input-label'>Precio <small>Recom: ({currencyFormat(cost / (1 - 0.30))})</small></label>
               <input
                 type="number"
+                step={0.01}
                 min={0}
                 {...register("price", { required: true, min: 0 })}
               />
@@ -344,26 +365,26 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                     src={image.url}
                     width={300}
                     height={300}
-                    className="rounded-t shadow-md bg-slate-300"
+                    className="rounded shadow-md bg-slate-300"
                   />
 
                   <button
                     type="button"
                     onClick={() => deleteProductImage(image.id, image.url)}
-                    className="btn-delete w-full rounded-b-xl"
+                    className="btn-delete"
                   >
-                    Eliminar
+                    <X className="flex-shrink-0" strokeWidth={1}/>
                   </button>
                 </div>
               ))}
             </div>
 
-            <div className="flex flex-col mb-2">
+            <div className="flex flex-col mb-2 mt-2">
               <label htmlFor='imageUrls' className='input-label'>URLs de imágenes</label>
               <textarea
                 {...register('imageUrls')}
-                placeholder="Ingrese las URLs de las imágenes una por línea"
-                className="p-2 border rounded-md bg-gray-200 text-sm"
+                rows={4}
+                placeholder="Ingrese una por línea"
               />
             </div>
           </div>
