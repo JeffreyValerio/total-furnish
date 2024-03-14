@@ -10,7 +10,6 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import './slideshow.css'
 import { useState } from 'react';
 
 interface Props {
@@ -62,8 +61,8 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
                 className="mySwiper !h-[180px] !py-3"
             >
                 {images.map(image => (
-                    <SwiperSlide key={image} className='hover:shadow-2xl hover:drop-shadow-2xl bg-slate-100 rounded-2xl'>
-                        <Image className='rounded-2xl'
+                    <SwiperSlide key={image} className='!h-24 hover:shadow-md hover:drop-shadow-md bg-slate-100 rounded-2xl'>
+                        <Image className='rounded-md !h-24'
                             src={image.startsWith('http') ? image : `/images/placeholder.jpg`}
                             width={200}
                             height={200}
@@ -74,4 +73,4 @@ export const ProductSlideshow = ({ images, title, className }: Props) => {
             </Swiper>
         </div>
     )
-} 
+}

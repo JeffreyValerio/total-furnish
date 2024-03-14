@@ -2,7 +2,7 @@ import { getProductBySlug } from "@/actions";
 import { Metadata, ResolvingMetadata } from "next";
 import { metadata } from '@/lib/SEO'
 import { notFound, redirect } from "next/navigation";
-import { ProductSlideshow } from "@/components";
+import { ProductMobileSlideshow, ProductSlideshow } from "@/components";
 import { ArrowRight, ChevronDown, Hash, Shield } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,12 +42,20 @@ export default async function ProductDetailsPage({ params }: Props) {
   return (
     <div className="max-width py-10">
 
-      <div className="grid grid-cols-2">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 justify-center">
 
-        <ProductSlideshow
-          title={product.name}
-          images={product.images}
-          className="md:block hidden" />
+        <div className="md:sticky top-0 w-full">
+          {/* MOBILE SLIDESHOW */}
+          <ProductMobileSlideshow
+            title={product.name}
+            images={product.images}
+            className="block md:hidden !mb-6" />
+          {/* DESKTOP SLIDESHOW */}
+          <ProductSlideshow
+            title={product.name}
+            images={product.images}
+            className="md:block hidden" />
+        </div>
 
         <div className="pb-6 md:py-0 px-6 md:px-20">
           <div className="border-b border-gray-200 pb-6">
@@ -108,7 +116,7 @@ export default async function ProductDetailsPage({ params }: Props) {
                   {Math.floor(priceIncludingTax)
                     .toLocaleString('es-CR', {
                       currency: 'CRC',
-                      maximumFractionDigits: 0 
+                      maximumFractionDigits: 0
                     })}
                 </span>
                 <span className="text-xl leading-none align-baseline">.{priceParts[1]} ivai</span>

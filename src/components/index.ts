@@ -31,3 +31,4 @@ export * from '@/components/ui/ImageApp'
 export * from '@/components/ui/Pagination'
 
 export * from '@/components/product/ProductSlideshow'
+export * from '@/components/product/ProductMobileSlideshow'
