@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 
 import { ArrowRightIcon } from 'lucide-react'
-import { ProductCard, VerticalText } from '..'
+import { ProductCard } from '..'
 import { IProduct } from '@/interfaces'
 
 interface Props {
@@ -13,8 +13,6 @@ interface Props {
 export const FeaturesProducts = ({ products }: Props) => {
     return (
         <div className="relative overflow-hidden">
-
-            {/* <VerticalText textLeft='Productos' textRight='destacados' /> */}
 
             <div className='py-20 max-width'>
 
