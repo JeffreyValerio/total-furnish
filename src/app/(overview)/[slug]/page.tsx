@@ -74,7 +74,7 @@ export default async function ProductDetailsPage({ params }: Props) {
             <h1 className="mb-4 lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 uppercase">{product.name}</h1>
 
             <div className="flex items-center mt-2.5">
-              {/* <StarRating rating={product.rating} /> */}
+                {/* <StarRating rating={product.rating} /> */}
             </div>
           </div>
 

@@ -27,26 +27,35 @@ export function CountdownTimer({ targetDate }: any) {
         }, 1000);
 
         return () => clearTimeout(timer);
-    });
+    }, [timeLeft]);
 
     return (
-        <div className="flex justify-between mt-8 font-bold uppercase w-full sm:w-3/4">
-            <div>
-                <span className='text-gray-600'>Días</span>
-                {timeLeft.days && <div className="text-4xl">{timeLeft.days} </div>}
-            </div>
+        <div className="grid grid-flow-col gap-5 text-center auto-cols-max mb-10 sm:mb-0">
 
-            <div>
-                <span className='text-gray-600'>Horas</span>
-                {timeLeft.hours && <div className="text-4xl">{timeLeft.hours}</div>}
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="font-mono text-5xl">
+                    <span>{timeLeft.days}</span>
+                </span>
+                Días
             </div>
-            <div>
-                <span className='text-gray-600'>Minutos</span>
-                {timeLeft.minutes && <div className="text-4xl" suppressHydrationWarning>{timeLeft.minutes}</div>}
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="font-mono text-5xl">
+                    <span>{timeLeft.hours}</span>
+                </span>
+                horas
             </div>
-            <div>
-                <span className='text-gray-600'>Segundos</span>
-                {timeLeft.seconds && <div className="text-4xl">{timeLeft.seconds}</div>}
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="font-mono text-5xl">
+                    <span>{timeLeft.minutes}</span>
+                </span>
+
+                min
+            </div>
+            <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
+                <span className="font-mono text-5xl">
+                    <span>{timeLeft.seconds}</span>
+                </span>
+                sec
             </div>
         </div>
     );

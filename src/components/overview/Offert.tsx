@@ -16,9 +16,10 @@ export const Offert = () => {
                 </div>
 
                 <div className="flex flex-col items-center justify-center px-10 pt-0 sm:pt-20">
-                    <h3 className="font-bold text-6xl leading-tight">Oferta especial <br/> por tiempo limitado</h3>
+                    <h3 className="font-bold text-6xl leading-tight">Oferta especial <br /> por tiempo limitado</h3>
                     <div className="w-full flex justify-start">
                         <CountdownTimer targetDate={targetDate} />
+  
                     </div>
                 </div>
             </div>

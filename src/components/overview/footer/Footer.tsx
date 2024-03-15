@@ -22,7 +22,7 @@ export const Footer = () => {
         </div>
       </nav>
       <aside>
-        <p>Copyright &copy; {year} - Derechos reservados | Total Furnish S.A</p>
+        <p>&copy; {year} | Total Furnish S.A</p>
       </aside>
     </footer>
   )

@@ -4,7 +4,7 @@ export const Logo = () => {
     return (
         <div className='font-bold text-2xl uppercase'>
             <Link href={'/'} className="text-oxfordBlue hover:text-oxfordBlue">
-                TotalFurnish
+                Total Furnish
             </Link>
         </div>
     )

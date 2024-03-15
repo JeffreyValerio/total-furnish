@@ -50,7 +50,7 @@ export const Header = () => {
               <li key={item.url}>
                 <Link href={item.url}
                   className={clsx("hover:underline px-6 py-2 rounded-md", {
-                    "underline font-bold": currentPath === item.url
+                    "underline link": currentPath === item.url
                   })}>
                   {item.label}
                 </Link>
