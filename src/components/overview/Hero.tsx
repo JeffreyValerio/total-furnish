@@ -29,9 +29,9 @@ export const Hero = () => {
                     background: "url('/images/hero.png')",
                   }}>
                   <div className='w-full max-width'>
-                    <div className="bg-oxfordBlue/40 p-8 text-center rounded-box">
+                    <div className="glass p-8 text-center rounded-box">
                       <h1 className="text-4xl font-bold">Tendencia 2024</h1>
-                      <p className="p-8 text-center text-white">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                      <p className="p-8 text-center">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                       <button className="btn-primary">Ver más</button>
                     </div>
                   </div>
@@ -44,9 +44,9 @@ export const Hero = () => {
                     background: "url('/images/hero2.png')",
                   }}>
                   <div className='w-full max-width'>
-                    <div className="bg-oxfordBlue/40 p-8 text-center rounded-box">
+                    <div className="glass p-8 text-center rounded-box">
                       <h1 className="text-4xl font-bold">Tendencia 2024</h1>
-                      <p className="p-8 text-center text-white">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                      <p className="p-8 text-center">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                       <button className="btn-primary">Ver más</button>
                     </div>
                   </div>

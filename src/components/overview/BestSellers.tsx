@@ -40,7 +40,7 @@ export const BestSellers = ({ products }: Props) => {
                                         width={900} height={300}
                                         className='w-[300px] h-[300px]'
                                     />
-                                    <p className='mb-2'>{product.name}</p>
+                                    <p className='mb-2 px-2'>{product.name}</p>
                                     <p className='font-bold text-xl'>{currencyFormat(product.price)}</p>
                                 </Link>
                             </React.Fragment>
