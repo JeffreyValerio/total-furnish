@@ -1,7 +1,4 @@
 import Link from 'next/link'
-import Image from 'next/image'
-import { Logo } from '@/components'
-import { Copyrigth } from './Copyrigth'
 
 export const Footer = () => {
 
