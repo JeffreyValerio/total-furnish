@@ -30,14 +30,14 @@ export const Hero = () => {
                     background: "url('/images/hero-1.png')",
                   }}>
                   <div className='w-full max-width'>
-                    {/* <div className="glass !border-none p-8 text-center rounded-box">
+                    <div className="bg-slate-100/70 !border-none p-8 text-center rounded-box">
                       <h1 className="text-4xl font-bold">Tendencia 2024</h1>
-                      <p className="p-8 text-center">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                      <p className="p-8 text-center font-medium">Diseña el espacio perfecto para tu hogar con muebles de calidad y con el mejor estilo.</p>
                       <button className="btn-primary">Ver más</button>
-                    </div> */}
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
+                </div> 
+              </SwiperSlide> 
 
               <SwiperSlide>
                 <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2"
@@ -45,11 +45,11 @@ export const Hero = () => {
                     background: "url('/images/hero-2.png')",
                   }}>
                   <div className='w-full max-width'>
-                    {/* <div className="glass p-8 text-center rounded-box">
+                    <div className="bg-slate-100/70 p-8 text-center rounded-box">
                       <h1 className="text-4xl font-bold">Tendencia 2024</h1>
-                      <p className="p-8 text-center">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                      <p className="p-8 text-center font-medium">Renueva tu cocina con muebles que deslumbran, el espacio que te mereces</p>
                       <button className="btn-primary">Ver más</button>
-                    </div> */}
+                    </div>
                   </div>
                 </div>
               </SwiperSlide>
