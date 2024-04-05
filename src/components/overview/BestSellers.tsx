@@ -16,7 +16,7 @@ export const BestSellers = ({ products }: Props) => {
             <section className='max-width 2xl:h-screen py-20 2xl:py-0 xl:grid grid-cols-4 gap-4 items-center justify-center xl:mb-0'>
                 <div className="sm:col-start-1 sm:col-end-2  overflow-hidden">
 
-                    <h1>Sillas de oficina</h1>
+                    <h1>Lo más vendido</h1>
                     <p>¡Mejora tu espacio de trabajo con nuestras sillas ergonómicas y elegantes! Encuentra la comodidad que necesitas para ser más productivo.</p>
 
                     <Link href={'/'} className='btn-primary mt-8 justify-center sm:w-1/2 rounded-md group flex items-center gap-x-2'>

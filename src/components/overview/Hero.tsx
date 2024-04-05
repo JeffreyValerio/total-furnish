@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import React from 'react'
 
 import 'swiper/css';
@@ -24,31 +25,31 @@ export const Hero = () => {
               className="mySwiper">
 
               <SwiperSlide>
-                <div className="hero h-full bg-base-200 !bg-cover !bg-center border grid sm:grid-cols-2"
+                <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2"
                   style={{
-                    background: "url('/images/hero.png')",
+                    background: "url('/images/hero-1.png')",
                   }}>
                   <div className='w-full max-width'>
-                    <div className="glass p-8 text-center rounded-box">
+                    {/* <div className="glass !border-none p-8 text-center rounded-box">
                       <h1 className="text-4xl font-bold">Tendencia 2024</h1>
                       <p className="p-8 text-center">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                       <button className="btn-primary">Ver más</button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </SwiperSlide>
 
               <SwiperSlide>
-                <div className="hero h-full bg-base-200 !bg-cover !bg-center border grid sm:grid-cols-2"
+                <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2"
                   style={{
-                    background: "url('/images/hero2.png')",
+                    background: "url('/images/hero-2.png')",
                   }}>
                   <div className='w-full max-width'>
-                    <div className="glass p-8 text-center rounded-box">
+                    {/* <div className="glass p-8 text-center rounded-box">
                       <h1 className="text-4xl font-bold">Tendencia 2024</h1>
                       <p className="p-8 text-center">Exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
                       <button className="btn-primary">Ver más</button>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </SwiperSlide>
@@ -56,31 +57,66 @@ export const Hero = () => {
             </Swiper>
           </div>
 
-          <div className="sm:col-start-4 sm:col-end-5">
+          <div className="sm:col-start-4 sm:col-end-5 !h-full">
+            <Swiper
+              loop
+              autoplay={{
+                delay: 3500,
+                disableOnInteraction: false,
+              }}
+              spaceBetween={0}
+              modules={[Autoplay, Pagination, Navigation]}
+              className="mySwiper">
 
-            <div className="carousel rounded-box h-full">
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1494253109108-2e30c049369b.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1559181567-c3190ca9959b.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-              <div className="carousel-item w-full">
-                <img src="https://daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.jpg" className="w-full" alt="Tailwind CSS Carousel component" />
-              </div>
-            </div>
+              <SwiperSlide>
+                <div className="rounded-box bg-slate-200">
+                  <Image
+                    className="w-full border rounded-box"
+                    src="/images/hero-aside-1.png"
+                    alt="hero-aside-1"
+                    height={480}
+                    width={400}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="rounded-box bg-slate-200">
+                  <Image
+                    className="w-full border rounded-box"
+                    src="/images/hero-aside-2.png"
+                    alt="hero-aside-1"
+                    height={480}
+                    width={400}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="rounded-box bg-slate-200">
+                  <Image
+                    className="w-full border rounded-box"
+                    src="/images/hero-aside-3.png"
+                    alt="hero-aside-1"
+                    height={480}
+                    width={400}
+                  />
+                </div>
+              </SwiperSlide>
+
+              <SwiperSlide>
+                <div className="rounded-box bg-slate-200">
+                  <Image
+                    className="w-full border rounded-box"
+                    src="/images/hero-aside-4.png"
+                    alt="hero-aside-1"
+                    height={480}
+                    width={400}
+                  />
+                </div>
+              </SwiperSlide>
+
+            </Swiper>
           </div>
         </div>
       </div>

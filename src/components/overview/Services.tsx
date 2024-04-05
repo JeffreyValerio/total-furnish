@@ -35,7 +35,9 @@ export const Services = () => {
                                 <div className="border p-3 sm:p-4 rounded-full border-slate-400 flex items-center justify-center">
                                     {item.icon}
                                 </div>
-                                <p className='text-sm md:text-lg uppercase flex-shrink-0 flex-wrap'>{item.title} <br className='hidden lg:block' />{item.subTitle}</p>
+                                <p className='text-sm md:text-lg uppercase flex-shrink-0 flex-wrap'>{item.title}
+                                    <br className='hidden lg:block' />{item.subTitle}
+                                </p>
                             </div>
                         </React.Fragment>
                     ))}

@@ -10,10 +10,14 @@ import slugify from 'slugify';
 
 const productSchema = z.object({
     id: z.string().uuid().optional().nullable(),
+    slug: z.string().min(3).max(255),
     name: z.string().min(3).max(100),
     model: z.string().min(3).max(100),
-    slug: z.string().min(3).max(255),
+    description: z.string(),
     tags: z.string(),
+
+    features: z.string(),
+    advantages: z.string(),
 
     front: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),
     depth: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),
@@ -22,9 +26,12 @@ const productSchema = z.object({
 
     cost: z.coerce.number().min(0).transform(val => Number(val.toFixed(2))),
     price: z.coerce.number().min(0).transform(val => Number(val.toFixed(2))),
+    specialPrice: z.coerce.number().min(0).transform(val => Number(val.toFixed(2))),
+    rating: z.coerce.number().min(0).transform(val => Number(val.toFixed(2))),
+    
+    type: z.enum(['BESTSELLER', 'FEATURE', 'GENERAL', 'TRENDING']),
 
     brandId: z.string().uuid(),
-    type: z.enum(['BESTSELLER', 'FEATURE', 'GENERAL', 'TRENDING']),
     categoryId: z.string().uuid(),
     supplierId: z.string().uuid(),
     warrantyId: z.string().uuid(),

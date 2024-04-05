@@ -79,36 +79,42 @@ model Supplier {
 }
 
 model Product {
-  id    String   @id @default(uuid())
-  slug  String   @unique
-  name  String
-  model String
-  tags  String[] @default([])
-
-  front  Int @default(0)
-  depth  Int @default(0)
-  height Int @default(0)
-  weight Int @default(0)
-
-  cost Float @default(0)
-  price Float @default(0)
-
-  type ProductType @default(GENERAL)
-
+  id           String         @id @default(uuid())
+  slug         String         @unique
+  name         String
+  model        String
+  description  String         
+  tags         String[]       @default([])
+  //
+  features     String         @default("") @db.Text
+  advantages   String         @default("") @db.Text
+  //
+  front        Int            @default(0)
+  depth        Int            @default(0)
+  height       Int            @default(0)
+  weight       Int            @default(0)
+  // 
+  cost         Float          @default(0)
+  price        Float          @default(0)
+  specialPrice Float          @default(0)
+  rating       Float          @default(5.0)
+  //
+  type         ProductType    @default(GENERAL)
+  //
   ProductImage ProductImage[]
-
-  // ONE TO ONE  
-  brand      Brand    @relation(fields: [brandId], references: [id])
-  brandId    String
-  supplier   Supplier @relation(fields: [supplierId], references: [id])
-  supplierId String
-  warranty   Warranty @relation(fields: [warrantyId], references: [id])
-  warrantyId String
+  // ONE TO ONE
+  brand        Brand          @relation(fields: [brandId], references: [id])
+  brandId      String
+  supplier     Supplier       @relation(fields: [supplierId], references: [id])
+  supplierId   String
+  warranty     Warranty       @relation(fields: [warrantyId], references: [id])
+  warrantyId   String
   // MANY TO ONE
-  category   Category @relation("ProductCategory", fields: [categoryId], references: [id])
-  categoryId String
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  category     Category       @relation("ProductCategory", fields: [categoryId], references: [id])
+  categoryId   String
+  // DATES
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
 }
 
 model ProductImage {
