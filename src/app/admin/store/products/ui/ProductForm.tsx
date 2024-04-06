@@ -477,15 +477,14 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
             </div>
 
             <div className="mt-6 mockup-code !min-w-full text-sm">
-              <pre data-prefix=">"
+              <pre
                 className={clsx("text-success", {
                   "!text-warning": parseFloat(margin.toFixed(2)) < 40.00,
                   "!text-red-600": parseFloat(margin.toFixed(2)) < 30.00
                 })}>
                 <code>(% {margin.toFixed(2)}) <span className="font-bold">Margen bruto</span> </code>
               </pre>
-              <pre 
-              data-prefix=">"
+              <pre
                 className={clsx("text-success", {
                   "!text-warning": parseFloat(markup.toFixed(2)) < 66.65,
                   "!text-red-600": parseFloat(markup.toFixed(2)) < 42.86
