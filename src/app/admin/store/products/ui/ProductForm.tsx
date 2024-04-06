@@ -23,9 +23,13 @@ interface Props {
 }
 
 interface FormData {
-  name: string
   slug: string
+
+  name: string
   model: string
+  description: string
+  features: string
+  advantages: string
   tags: string
 
   front: number
@@ -35,6 +39,8 @@ interface FormData {
 
   cost: number
   price: number
+  specialPrice: number
+  rating: number
 
   images?: FileList;
   imageUrls?: string;
@@ -81,6 +87,9 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
       setValue('name', `${product.name}`)
       setValue('slug', `${product.slug}`)
       setValue('model', `${product.model}`)
+      setValue('description', `${product.description}`)
+      setValue('features', `${product.features}`)
+      setValue('advantages', `${product.advantages}`)
 
       setValue("front", Number(product.front))
       setValue("depth", Number(product.depth))
@@ -89,6 +98,8 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
 
       setValue("cost", Number(product.cost))
       setValue("price", Number(product.price))
+      setValue("specialPrice", Number(product.specialPrice))
+      setValue("rating", Number(product.rating))
 
       setValue('brandId', `${product.brandId}`)
       setValue('categoryId', `${product.categoryId}`)
@@ -109,10 +120,14 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
       formData.append('id', product.id ?? "")
     }
 
-    formData.append('name', productToSave.name)
     formData.append('slug', productToSave.slug)
+
+    formData.append('name', productToSave.name)
     formData.append('model', productToSave.model)
-    formData.append("tags", productToSave.tags);
+    formData.append('description', productToSave.description)
+    formData.append('features', productToSave.features)
+    formData.append('advantages', productToSave.advantages)
+    formData.append("tags", productToSave.tags)
 
     formData.append("front", `${productToSave.front}`);
     formData.append("depth", `${productToSave.depth}`);
@@ -121,6 +136,8 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
 
     formData.append("cost", `${productToSave.cost}`);
     formData.append("price", `${productToSave.price}`);
+    formData.append("specialPrice", `${productToSave.specialPrice}`);
+    formData.append("rating", `${productToSave.rating}`);
 
     formData.append('type', productToSave.type)
     formData.append('brandId', productToSave.brandId)
@@ -173,7 +190,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
             <div className="flex flex-col mb-2 relative">
               <label htmlFor="name" className="input-label">Nombre</label>
               <textarea
-                rows={4}
+                rows={3}
                 className="h-fit"
                 {...register('name', {
                   required: 'El nombre es un valor requerido',
@@ -184,6 +201,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 <p className="input-error">*{errors.name.message || 'Debe usar mínimo 3 caracteres'}</p>
               )}
             </div>
+
             <div className="flex flex-col mb-2 relative">
               <label htmlFor="model" className="input-label">Modelo</label>
               <input
@@ -198,19 +216,64 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
               )}
             </div>
 
+            {/* DESCRIPTION */}
+            <div className="flex flex-col mb-2 relative">
+              <label htmlFor="description" className="input-label">Descripción</label>
+              <textarea
+                rows={4}
+                className="h-fit"
+                {...register('description', {
+                  required: 'La descripción es un valor requerido',
+                  minLength: 3
+                })}
+              />
+              {errors.name && (
+                <p className="input-error">*{errors.name.message || 'Debe usar mínimo 3 caracteres'}</p>
+              )}
+            </div>
+
+            {/* FEATURES */}
+            <div className="flex flex-col mb-2 relative">
+              <label htmlFor="features" className="input-label">Características</label>
+              <textarea
+                rows={4}
+                className="h-fit"
+                {...register('features', {
+                  required: 'La descripción es un valor requerido',
+                  minLength: 3
+                })}
+              />
+              {errors.name && (
+                <p className="input-error">*{errors.name.message || 'Debe usar mínimo 3 caracteres'}</p>
+              )}
+            </div>
+
+            {/* ADVANTAGES */}
+            <div className="flex flex-col mb-2 relative">
+              <label htmlFor="advantages" className="input-label">Ventajas</label>
+              <textarea
+                rows={4}
+                className="h-fit"
+                {...register('advantages', {
+                  required: 'La descripción es un valor requerido',
+                  minLength: 3
+                })}
+              />
+              {errors.name && (
+                <p className="input-error">*{errors.name.message || 'Debe usar mínimo 3 caracteres'}</p>
+              )}
+            </div>
+
             {/* TAGS */}
             <div className="flex flex-col mb-2">
               <label htmlFor='tags' className='input-label'>Palabras clave</label>
               <input
                 type="text"
                 {...register("tags")}
+                placeholder="keyword-one, keyword-two"
               />
             </div>
 
-            <div className="flex flex-col mt-6">
-              <p><span className="font-bold">Margen bruto:</span> (% {margin.toFixed(2)}) </p>
-              <p><span className="font-bold">Markup:</span> (% {markup.toFixed(2)}) </p>
-            </div>
           </div>
 
           {/* SECOND COLUMN */}
@@ -313,6 +376,26 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
             </div>
 
             <div className="flex flex-col mb-2">
+              <label htmlFor='specialPrice' className='input-label'>Precio especial</label>
+              <input
+                type="number"
+                step={0.01}
+                min={0}
+                {...register("specialPrice", { required: true, min: 0 })}
+              />
+            </div>
+
+            <div className="flex flex-col mb-2">
+              <label htmlFor='rating' className='input-label'>Rating</label>
+              <input
+                type="number"
+                step={0.01}
+                min={0}
+                {...register("rating", { required: true, min: 0 })}
+              />
+            </div>
+
+            <div className="flex flex-col mb-2">
               <label htmlFor='front' className='input-label'>Frente</label>
               <input
                 type="number"
@@ -390,6 +473,11 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 rows={4}
                 placeholder="Ingrese una por línea"
               />
+            </div>
+
+            <div className="flex flex-col mt-6">
+              <p><span className="font-bold">Margen bruto:</span> (% {margin.toFixed(2)}) </p>
+              <p><span className="font-bold">Markup:</span> (% {markup.toFixed(2)}) </p>
             </div>
           </div>
         </div>

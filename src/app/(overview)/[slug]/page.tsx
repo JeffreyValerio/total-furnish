@@ -74,14 +74,13 @@ export default async function ProductDetailsPage({ params }: Props) {
             <h1 className="mb-4 lg:text-2xl text-xl font-semibold lg:leading-6 leading-7 text-gray-800 mt-2 uppercase">{product.name}</h1>
 
             <div className="flex items-center mt-2.5">
-                {/* <StarRating rating={product.rating} /> */}
+              {/* <StarRating rating={product.rating} /> */}
             </div>
           </div>
 
           <div>
-            {/* <Markdown className="line-clamp-6 markdown lg:leading-tight leading-normal text-gray-600 mt-2">{product.description}</Markdown> */}
-            {/* <div className="line-clamp-6 markdown text-base lg:leading-tight leading-normal text-gray-600 mt-2"
-              dangerouslySetInnerHTML={{ __html: `${product.description || product.features}` }}></div> */}
+            <div className="line-clamp-6 markdown text-base lg:leading-tight leading-normal text-gray-600 mt-2"
+              dangerouslySetInnerHTML={{ __html: `${product.description || product.features}` }}></div>
             <Link href={`${product.slug}#detalles`}
               className="ml-4 my-2 flex items-center opacity-50 text-gray-900 hover:opacity-100 text-xs leading-none">
               VER MÁS

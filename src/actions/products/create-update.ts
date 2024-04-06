@@ -11,13 +11,14 @@ import slugify from 'slugify';
 const productSchema = z.object({
     id: z.string().uuid().optional().nullable(),
     slug: z.string().min(3).max(255),
+
     name: z.string().min(3).max(100),
     model: z.string().min(3).max(100),
     description: z.string(),
-    tags: z.string(),
-
     features: z.string(),
     advantages: z.string(),
+    tags: z.string(),
+
 
     front: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),
     depth: z.coerce.number().min(0).transform(val => Number(val.toFixed(0))),

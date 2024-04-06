@@ -34,7 +34,7 @@ export const DeleteProductButton = ({ productId: id, text }: Props) => {
                     })
                 }
             }}
-            className={clsx("text-sm text-gray-900 whitespace-nowrap", {
+            className={clsx("text-sm text-gray-900 whitespace-nowrap rounded", {
                 'btn-delete text-center': text
             })}>
             <span className={clsx("", { 'hidden': !text })} >

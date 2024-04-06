@@ -25,7 +25,7 @@ export const Hero = () => {
               className="mySwiper">
 
               <SwiperSlide>
-                <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2"
+                <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2 rounded-box"
                   style={{
                     background: "url('/images/hero-1.png')",
                   }}>
@@ -40,7 +40,7 @@ export const Hero = () => {
               </SwiperSlide> 
 
               <SwiperSlide>
-                <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2"
+                <div className="hero h-full w-full bg-base-200 !bg-cover !bg-center grid sm:grid-cols-2 rounded-box"
                   style={{
                     background: "url('/images/hero-2.png')",
                   }}>
@@ -57,7 +57,7 @@ export const Hero = () => {
             </Swiper>
           </div>
 
-          <div className="sm:col-start-4 sm:col-end-5 !h-full">
+          <div className="sm:col-start-4 sm:col-end-5 !h-full rounded-box overflow-hidden">
             <Swiper
               loop
               autoplay={{

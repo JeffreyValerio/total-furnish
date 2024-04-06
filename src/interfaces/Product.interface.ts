@@ -4,29 +4,42 @@ export interface IProduct {
     [x: string]: any
     id: string;
     slug: string;
+
     name: string;
     model: string;
-    tags: string[];
-    front: number;
-    depth: number;
-    height: number;
-    weight: number;
+    description: string
+    features: string
+    advantages: string
+    tags: string[]
+
+    front: number
+    depth: number
+    height: number
+    weight: number
 
     cost: number
     price: number
+    specialPrice: number
+    rating: number
 
-    brandId: string;
-    supplierId: string;
-    warrantyId: string;
-    categoryId: string;
-    createdAt: Date;
-    updatedAt: Date;
     brand: Brand;
+    brandId: string;
+
     category: Category;
-    type: ProductType
-    ProductImage: ProductImage[];
+    categoryId: string;
+    
     supplier?: Supplier;
+    supplierId: string;
+    
     warranty?: Warranty;
+    warrantyId: string;
+    
+    type: ProductType
+    
+    ProductImage: ProductImage[];
+
+    updatedAt: Date;
+    createdAt: Date;
 }
 
 export interface ProductImage {

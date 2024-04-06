@@ -74,7 +74,7 @@
         @apply border border-oxfordBlue px-6 py-2 rounded-btn sm:text-xl hover:bg-oxfordBlue/90 hover:text-white transition-all duration-300 ease-in-out
     }
     .btn-admin{
-        @apply bg-blue-900 !text-white px-6 py-2 rounded-btn text-sm hover:bg-blue-800 transition-all duration-300 ease-in-out
+        @apply bg-blue-900 !text-white px-6 py-2 rounded text-sm hover:bg-blue-800 transition-all duration-300 ease-in-out
     }
     .btn-delete{
         @apply flex justify-center items-center w-full bg-red-900 !text-white hover:bg-red-800 transition-all duration-300 ease-in-out
@@ -114,7 +114,7 @@
       @apply text-slate-700 mb-2 block text-sm
     }
     p {
-      @apply font-light text-base
+      @apply font-normal text-base
     }
 
 }
