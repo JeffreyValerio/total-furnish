@@ -11,7 +11,7 @@ import { DeleteProductButton } from "./DeleteButton";
 import { BackButton, ProductImage } from "@/components";
 import { IProduct, ProductImage as ProductWithImage } from '@/interfaces/Product.interface'
 import { currencyFormat } from "@/utils";
-import { X } from "lucide-react";
+import { Circle, X } from "lucide-react";
 import clsx from "clsx";
 
 interface Props {
@@ -389,8 +389,9 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
               <label htmlFor='rating' className='input-label'>Rating</label>
               <input
                 type="number"
-                step={0.01}
+                step={0.1}
                 min={0}
+                max={5}
                 {...register("rating", { required: true, min: 0 })}
               />
             </div>
@@ -475,10 +476,34 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
               />
             </div>
 
-            <div className="flex flex-col mt-6">
-              <p><span className="font-bold">Margen bruto:</span> (% {margin.toFixed(2)}) </p>
-              <p><span className="font-bold">Markup:</span> (% {markup.toFixed(2)}) </p>
+            <div className="mt-6 mockup-code">
+              <pre data-prefix=">"
+                className={clsx("text-success", {
+                  "!text-warning": parseFloat(margin.toFixed(2)) < 40.00,
+                  "!text-red-600": parseFloat(margin.toFixed(2)) < 30.00
+                })}>
+                <code>(% {margin.toFixed(2)}) <span className="font-bold">Margen bruto</span> </code>
+              </pre>
+              <pre data-prefix=">"
+                className={clsx("text-success", {
+                  "!text-warning": parseFloat(markup.toFixed(2)) < 66.65,
+                  "!text-red-600": parseFloat(markup.toFixed(2)) < 42.86
+                })}>
+                <code>(% {markup.toFixed(2)}) <span className="font-bold">Markup</span> </code>
+              </pre>
+
+              <hr className="my-4" />
+
+              <div>
+                <pre className="rounded flex justify-between items-center gap-x-2 text-sm">
+                  <code className="flex items-center"> <Circle className="bg-red-600 rounded-full text-red-600" size={18} strokeWidth={1} /> Bad</code>
+                  <code className="flex items-center"> <Circle className="bg-warning rounded-full text-warning" size={18} strokeWidth={1} /> Good</code>
+                  <code className="flex items-center"> <Circle className="bg-success rounded-full text-success" size={18} strokeWidth={1} /> Excellent</code>
+                </pre>
+              </div>
+
             </div>
+
           </div>
         </div>
 
