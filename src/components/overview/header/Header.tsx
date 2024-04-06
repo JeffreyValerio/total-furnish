@@ -46,6 +46,15 @@ export const Header = () => {
 
         <nav>
           <ul className='flex justify-end uppercase gap-x-2'>
+
+            <li className="dropdown dropdown-hover px-6 py-2 z-50">
+              <div tabIndex={0} role="button" className="hover:underline px-6 py-2 rounded-md">Hover</div>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+              </ul>
+            </li>
+
             {menu.map((item) => (
               <li key={item.url}>
                 <Link href={item.url}
@@ -56,6 +65,7 @@ export const Header = () => {
                 </Link>
               </li>
             ))}
+
 
             <li>
               <Link href={'/cotizar'} className='btn-primary text-base font-bold tracking-wide'>
