@@ -476,7 +476,7 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
               />
             </div>
 
-            <div className="mt-6 mockup-code">
+            <div className="mt-6 mockup-code !min-w-full text-sm">
               <pre data-prefix=">"
                 className={clsx("text-success", {
                   "!text-warning": parseFloat(margin.toFixed(2)) < 40.00,
@@ -484,7 +484,8 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
                 })}>
                 <code>(% {margin.toFixed(2)}) <span className="font-bold">Margen bruto</span> </code>
               </pre>
-              <pre data-prefix=">"
+              <pre 
+              data-prefix=">"
                 className={clsx("text-success", {
                   "!text-warning": parseFloat(markup.toFixed(2)) < 66.65,
                   "!text-red-600": parseFloat(markup.toFixed(2)) < 42.86
@@ -495,10 +496,10 @@ export const ProductForm = ({ product, brands, categories, suppliers, warranties
               <hr className="my-4" />
 
               <div>
-                <pre className="rounded flex justify-between items-center gap-x-2 text-sm">
-                  <code className="flex items-center"> <Circle className="bg-red-600 rounded-full text-red-600" size={18} strokeWidth={1} /> Bad</code>
-                  <code className="flex items-center"> <Circle className="bg-warning rounded-full text-warning" size={18} strokeWidth={1} /> Good</code>
-                  <code className="flex items-center"> <Circle className="bg-success rounded-full text-success" size={18} strokeWidth={1} /> Excellent</code>
+                <pre className="rounded flex justify-between text-xs">
+                  <code className="flex items-center gap-x-1"> <Circle className="bg-red-600 rounded-full text-red-600" size={12} strokeWidth={1} />Bad</code>
+                  <code className="flex items-center gap-x-1"> <Circle className="bg-warning rounded-full text-warning" size={12} strokeWidth={1} />Good</code>
+                  <code className="flex items-center gap-x-1"> <Circle className="bg-success rounded-full text-success" size={12} strokeWidth={1} />Excellent</code>
                 </pre>
               </div>
 
